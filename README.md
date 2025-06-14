@@ -51,4 +51,14 @@ clock set HH:MM:SS MONTH DAY YEAR
 
 ```bash
 clock set 10:30:00 Jun 15 2025
+````
+### 3️⃣ Assign IP Address to Interfaces
 
+Use the following command to assign an IP address to a Cisco ASA interface:
+
+```bash
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+````
+➡️ Repeat this step for each interface (e.g., INSIDE, DMZ, OUTSIDE) using the appropriate IP addressing scheme.
