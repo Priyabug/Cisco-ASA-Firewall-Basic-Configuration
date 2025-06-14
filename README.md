@@ -105,3 +105,11 @@ Once your configuration is complete, use the following commands to **save your w
 write memory
 show running-config
 ````
+
+### 📝 Explanation
+
+- `write memory` – 💾 Saves the current **running configuration** to the **startup configuration**, ensuring changes persist after a reboot.
+- `show running-config` – 📋 Displays all **active configurations** currently applied on the device.
+
+✅ **Always remember** to save your changes to avoid losing your configuration after a restart.
+
