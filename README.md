@@ -38,5 +38,13 @@ Below are the foundational setup steps for Cisco ASA:
 hostname ASA-FW
 enable password [YourEnablePassword]
 username admin password [YourAdminPassword] privilege 15
+````
+### 2️⃣ Configure System Clock and Date
+
+Set the system time and date on the ASA firewall to ensure accurate logging and synchronization.
+
+```bash
+clock set HH:MM:SS MONTH DAY YEAR
+````
 
 
