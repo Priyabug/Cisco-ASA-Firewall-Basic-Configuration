@@ -62,3 +62,21 @@ interface GigabitEthernet0/0
  no shutdown
 ````
 ➡️ Repeat this step for each interface (e.g., INSIDE, DMZ, OUTSIDE) using the appropriate IP addressing scheme.
+
+### 4️⃣ Set Name and Security Level for Each Interface
+
+Assign logical names and security levels to each interface to define trusted, semi-trusted, and untrusted zones:
+
+```bash
+interface GigabitEthernet0/0
+ nameif INSIDE
+ security-level 100
+
+interface GigabitEthernet0/1
+ nameif DMZ
+ security-level 50
+
+interface GigabitEthernet0/2
+ nameif OUTSIDE
+ security-level 0
+````
