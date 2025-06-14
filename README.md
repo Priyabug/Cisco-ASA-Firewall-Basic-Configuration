@@ -1,56 +1,43 @@
 # Cisco-ASA-Firewall-Basic-Configuration
 
-## ⚙️ Technologies Implemented
+# 🔐 Cisco ASA Firewall Configuration – Multi-Zone Network
 
-This project showcases a range of essential networking technologies and configurations using Cisco equipment in a simulated environment.
+## 🔸 What is ASA?
 
----
+The **Cisco Adaptive Security Appliance (ASA)** is an advanced security solution that integrates:
 
-### 🧩 Network Infrastructure
+- ✅ Classic firewall capabilities  
+- 🔒 VPN (Virtual Private Network)  
+- 🛡 Intrusion Prevention (IPS)  
+- 🦠 Antivirus protection  
 
-- 🛠️ **Creating a Simple Network**  
-  Built a basic topology using a **Cisco Router** and an **Access Layer Switch**.
-
-- 🔌 **Correct Cabling**  
-  Connected routers, switches, and host devices using **appropriate cable types** (straight-through and crossover).
-
----
-
-### 🧱 Layer 2 Configurations
-
-- 🏷️ **VLAN Creation & Port Assignment**  
-  Defined multiple **VLANs** and assigned switch ports to specific VLAN IDs to isolate departmental traffic.
-
-- 🧮 **Subnetting & IP Addressing**  
-  Subnetted the IP network to align with VLAN requirements and assigned **logical IP schemes**.
+ASA is designed to **prevent threats before they penetrate the internal network**, making it a vital component in modern enterprise and SMB security infrastructures.
 
 ---
 
-### 🌐 Layer 3 Configurations
+## 🌐 Network Security Zones
 
-- 🔁 **Inter-VLAN Routing (Router-on-a-Stick)**  
-  Configured **sub-interfaces** on a single router interface to enable communication between VLANs.
+In this configuration, we define **three security zones**:
 
-- 📡 **DHCP Configuration**  
-  Implemented a **DHCP server on the router** to provide automatic IP addressing to host devices.
+| Zone      | Description                                        | Trust Level   |
+|-----------|----------------------------------------------------|---------------|
+| `INSIDE`  | Internal network zone (users, internal resources)  | Trusted       |
+| `DMZ`     | Servers (web, DNS, mail) exposed to outside access | Semi-trusted  |
+| `OUTSIDE` | Internet/ISP connectivity                          | Untrusted     |
 
----
-
-### 📶 Wireless Networking
-
-- 📲 **WLAN Setup (Cisco Access Point)**  
-  Configured **wireless access** for each department using a Cisco Access Point for mobile connectivity.
+These zones allow for **granular control of traffic** entering and leaving each segment of the network.
 
 ---
 
-### 🖥️ Host & Network Testing
+## ⚙️ Basic ASA Configuration Steps
 
-- 🧾 **Static & Dynamic Host Configurations**  
-  Configured host devices using both **static IPs** and **DHCP assignments**.
+Below are the foundational setup steps for Cisco ASA:
 
-- ✅ **Testing & Verification**  
-  Verified end-to-end connectivity using tools like `ping` and **simulation mode** in Packet Tracer.
+### 1️⃣ Configure Hostname and Authentication
 
----
+```bash
+hostname ASA-FW
+enable password [YourEnablePassword]
+username admin password [YourAdminPassword] privilege 15
 
-> 💡 This project demonstrates real-world skills in switching, routing, IP planning, wireless setup, and DHCP—all within a secure, scalable network design.
+
