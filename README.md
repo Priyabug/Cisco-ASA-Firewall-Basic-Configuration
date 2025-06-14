@@ -96,3 +96,12 @@ Security levels help ASA enforce **default traffic behavior**:
 - Traffic **from higher to lower** security levels is allowed by default.
 - Traffic **from lower to higher** levels is denied unless explicitly permitted.
 
+
+### 💾 5️⃣ Save and Verify Configuration
+
+Once your configuration is complete, use the following commands to **save your work** and **review current settings**:
+
+```bash
+write memory
+show running-config
+````
