@@ -80,3 +80,19 @@ interface GigabitEthernet0/2
  nameif OUTSIDE
  security-level 0
 ````
+
+### 🔐 Security Levels in Cisco ASA
+
+The Cisco ASA firewall uses **security levels** to determine the trustworthiness of each interface and apply implicit access rules.
+
+| Security Level | Trust Level      | Example                          |
+|----------------|------------------|----------------------------------|
+| `100`          | Fully Trusted    | Internal LAN (e.g., INSIDE)      |
+| `50`           | Semi-Trusted     | DMZ with public-facing servers   |
+| `0`            | Untrusted        | External network (e.g., OUTSIDE) |
+
+📎 **Note:**  
+Security levels help ASA enforce **default traffic behavior**:
+- Traffic **from higher to lower** security levels is allowed by default.
+- Traffic **from lower to higher** levels is denied unless explicitly permitted.
+
