@@ -47,4 +47,8 @@ Set the system time and date on the ASA firewall to ensure accurate logging and 
 clock set HH:MM:SS MONTH DAY YEAR
 ````
 
+📌 **Example:**
+
+```bash
+clock set 10:30:00 Jun 15 2025
 
