@@ -26,6 +26,10 @@ In this configuration, we define **three security zones**:
 
 These zones allow for **granular control of traffic** entering and leaving each segment of the network.
 
+
+![image](https://github.com/user-attachments/assets/6698f697-1294-4f9d-9358-b78d760059d6)
+
+
 ---
 
 ## ⚙️ Basic ASA Configuration Steps
